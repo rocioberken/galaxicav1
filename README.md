@@ -1,13 +1,15 @@
+Hello MS Team!
+
+Here's the app and a preview link: https://msdashboard.vercel.app/
+
+Feel free to share any comments or suggestions.
+
+If I had a little more time, I'd work more on the table and drawer animations.
+For mobile devices, I decided to hide two columns of information to prevent horizontal scrolling and improve accessibility.
+
+****** Original Request ***** 
+
 # UX Developer SSR. Challenge
-
-
-Hi MS team!
-
-Here's the app and a preview link
-
-Please feel free to share with me any comments or feedback. 
-If I had a little more time, I would work more on the table and drawer animations.
-For mobile, I decided to hide two columns of information in order to avoid a horizontal scroll and improve
 
 
 ## The Challenge

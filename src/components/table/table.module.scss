@@ -12,33 +12,26 @@
     font-size: 24px;
     margin-block: .75rlh 0.25rlh;
   }
-
   p {
     margin: 0;
   }
-
   .approved {
     background-color: var(--success);
     color: var(--text-contrast);
   }
-
   .pending {
     background-color: var(--warning);
     color: var(--text-contrast);
   }
-
   .rejected {
     background-color: var(--error);
     color: var(--text);
   }
-
   .transactions {
     cursor: pointer;
     width: 100%;
-    transition: all 0.4s ease;
     margin: 1.5rem 0;
-    border-spacing: 0; transition: background 0.9s ease;
-
+    border-spacing: 0; 
     th {
       font-size: 12px;
       font-weight: 400;
@@ -69,8 +62,7 @@
           .container {
             padding: 5px !important;
           }
-        }
-      
+        }      
       .email {
       font-weight: 400;
       font-size: 12px;
@@ -82,11 +74,9 @@
     }
   }
   
-
   @media screen and (max-width: 700px) {
     .table {
       width: max-content !important;  
-
     }
     .hideMobile {
       display: none !important;
@@ -101,7 +91,6 @@
   }
   .clickableRow:hover {
     background-color: var(--neutral-gray-200); 
-    
 
   }
   .drawer {
@@ -111,20 +100,27 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    z-index: 100;
+    z-index: 2000;
     padding-top: 2rem;
-
+    
+    .drawer:target {
+      opacity: 1;
+      pointer-events: auto;
+    }
     @media screen and (max-width: 700px) {
       align-items: center !important; 
       padding-top: 2rem !important;
     }
    
   }
-
   .modalContent {
     max-width: 400px;
     width: 90%;
     position: relative; 
+    .modalContent:target {
+      opacity: 1;
+      pointer-events: auto;
+    }
 
     .closeButton {
       position: absolute;
