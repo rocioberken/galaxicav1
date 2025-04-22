@@ -12,7 +12,7 @@ export const Orders = () => {
         return <div className="empty">
             
             
-            <img src="../../public/orders_background.png" alt="" />
+            <img src="./orders_background.png" alt="" />
             <h3> No orders yet</h3>
             <p>There’s currently no orders placed </p>
             </div>;

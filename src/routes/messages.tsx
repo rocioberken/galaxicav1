@@ -12,7 +12,7 @@ export const Messages = () => {
         return <div className="empty">
             
             
-            <img src="../../../public/messages_background.png" alt="" />
+            <img src="./messages_background.png" alt="" />
             <h3> No new messages</h3>
             <p>There’s currently no new messages  </p>
             </div>;
