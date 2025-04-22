@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import styles from "./cards.module.css";
+import styles from "./cards.module.scss";
 
 import {
   ArrowTrendingDownIcon,

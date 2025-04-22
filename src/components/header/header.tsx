@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Toggle } from "../toggle/toggle";
-import styles from "./header.module.css";
+import styles from "./header.module.scss";
 
 interface HeaderProps {
   onToggleSidebar: () => void;

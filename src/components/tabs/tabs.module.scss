@@ -9,10 +9,17 @@
     text-decoration: none;
     font-size: 14px;
     color: var(--neutral-gray-900);
+    transition: all 0.3s ease, color 0.3s ease;
 
     &[aria-current="page"] {
       border-bottom: 2px solid var(--success);
       font-weight: 700;
+      transition: all 0.3s ease;
+
     }
+  }
+  li{
+    transition: all 0.3s ease, color 0.3s ease;
+
   }
 }

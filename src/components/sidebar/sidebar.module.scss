@@ -6,7 +6,7 @@
   padding-right: 1rem;
   width: 200px;
   transition: all 0.3s ease;
-   z-index: 1000;
+  z-index: 1000;
 
   @media screen and (max-width: 700px) {
     position: fixed;
@@ -17,7 +17,7 @@
     margin-top: 0;
     padding: 60px 10px 0 10px;
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     background-color: var(--background);
 
@@ -26,10 +26,10 @@
     }
   }
 
-
   ul {
     list-style: none;
     padding: 0;
+
     .navigation {
       margin-bottom: 0.5rem;
       display: flex;
@@ -53,67 +53,42 @@
     }
   }
 
-  .collapseBtn {
-    appearance: none;
-    background-color: transparent;
+  .mobileToggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
     border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0.5rem;
-    color: var(--main);
-    svg {
-      height: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    @media screen and (max-width: 700px) {
+      display: block;
     }
   }
 
-  &.collapsed {
-    span {
-      display: none;
-    }
-    width: fit-content;
-    max-width: 80px;
-    gap: 0;
+  .backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 900;
+    transition: opacity 0.3s ease;
+    opacity: 0;
 
-    .collapseBtn {
-      transform: rotate(180deg);
-      margin: 0 auto;
+    &.show {
+      display: block;
+      opacity: 1;
     }
-  }
-
   
-
-.mobileToggle {
-  display: none;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 2000;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-
-  @media screen and (max-width: 700px) {
-    display: block;
   }
+  li  {
+    transition: all 0.3s ease;
+&:hover{
+    opacity: 0.9;
+    box-shadow: inset 0 0 1px 1px var(--neutral-gray-300);
+    border-radius: 10px;
+    background-color: var(--neutral-gray-300);
+  }}
 }
-
-
-.backdrop {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: 900;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-
-  &.show {
-    display: block;
-    opacity: 1;
-  }
-
-  @media screen and (min-width: 700px) {
-    display: none !important;
-  }
-}}

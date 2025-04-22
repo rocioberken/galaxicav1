@@ -7,7 +7,7 @@ import {
   SortingState,
   useReactTable,
 } from "@tanstack/react-table";
-import styles from "./table.module.css";
+import styles from "./table.module.scss";
 import { Status } from "../status/status";
 
 export type ProductStatusProps = "Approved" | "Pending" | "Rejected";

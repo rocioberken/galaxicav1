@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { ProductStatusProps } from "../table/table";
-import styles from "./status.module.css";
+import styles from "./status.module.scss";
 import {
   CheckCircleIcon,
   ExclamationCircleIcon,
