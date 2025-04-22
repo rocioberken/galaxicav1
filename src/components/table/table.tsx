@@ -135,7 +135,7 @@ export const Table = ({ data }: Props) => {
                 <button onClick={handleClose} className={styles.closeButton}>
                   ×
                 </button>
-                <div className={styles.productImage}> <img src="./../public/product.jpg" alt="" /></div>
+                <div className={styles.productImage}> <img src="./product.jpg" alt="" /></div>
 
                 <div className={styles.productDataTable}>
                   <h3>
