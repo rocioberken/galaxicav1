@@ -1,0 +1,53 @@
+header{
+    display: inline-flex;
+    width: calc(100vw - 2rem);
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding:0 1rem;
+    position: absolute;
+    height: 30px;
+    align-items: center;
+}
+.logo img{
+    max-width: 28px;
+}
+
+.user {
+ display: inline-flex;
+ gap: 5px;
+ align-items: center;
+
+    p{
+        display: contents;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 12px;
+        @media screen and (max-width: 700px) {
+            display: none !important;
+            z-index: 2000;
+              align-self: center;
+          }
+    }
+    img{
+        max-width: 32px;
+    }
+}
+ 
+.mobileMenuButton {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--main);
+    cursor: pointer;
+    padding: 0;
+  
+    @media screen and (max-width: 700px) {
+      display: block;
+      z-index: 2000;
+        align-self: center;
+        padding-bottom: 5px;
+
+    }
+   }
+  

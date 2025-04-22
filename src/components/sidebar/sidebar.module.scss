@@ -1,0 +1,119 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 60px;
+  padding-right: 1rem;
+  width: 200px;
+  transition: all 0.3s ease;
+   z-index: 1000;
+
+  @media screen and (max-width: 700px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    margin-top: 0;
+    padding: 60px 10px 0 10px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--background);
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+
+
+  ul {
+    list-style: none;
+    padding: 0;
+    .navigation {
+      margin-bottom: 0.5rem;
+      display: flex;
+      font-size: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      color: var(--text);
+      gap: 0.5rem;
+      align-items: center;
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      &[aria-current="page"] {
+        background-color: var(--main);
+        color: var(--text-contrast);
+      }
+    }
+  }
+
+  .collapseBtn {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+    color: var(--main);
+    svg {
+      height: 1rem;
+    }
+  }
+
+  &.collapsed {
+    span {
+      display: none;
+    }
+    width: fit-content;
+    max-width: 80px;
+    gap: 0;
+
+    .collapseBtn {
+      transform: rotate(180deg);
+      margin: 0 auto;
+    }
+  }
+
+  
+
+.mobileToggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  @media screen and (max-width: 700px) {
+    display: block;
+  }
+}
+
+
+.backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 900;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 700px) {
+    display: none !important;
+  }
+}}
