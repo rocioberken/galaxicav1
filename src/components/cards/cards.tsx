@@ -1,11 +1,9 @@
-import React from "react";
 import clsx from "clsx";
 import styles from "./cards.module.css";
 
 import {
   ArrowTrendingDownIcon,
   ArrowTrendingUpIcon,
-  EqualsIcon,
 } from "@heroicons/react/24/outline";
 
 export type CardResult = "positive" | "negative" | null;

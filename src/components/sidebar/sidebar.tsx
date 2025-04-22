@@ -3,7 +3,6 @@ import {
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 
 import styles from "./sidebar.module.scss";
 import clsx from "clsx";
