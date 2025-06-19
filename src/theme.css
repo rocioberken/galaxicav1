@@ -13,6 +13,10 @@ html {
   --neutral-gray-800: hsla(0, 0%, 26%, 1);
   --neutral-gray-900: hsla(0, 0%, 13%, 1);
 
+  --neutral-violet-300: hsla(253, 50%, 93%, 1);
+  --neutral-violet-800: hsla(251, 100%, 65%, 1);
+
+
   --main: hsla(203, 52%, 13%, 1);
 
   --success: hsla(155, 87%, 43%, 1);
@@ -39,6 +43,9 @@ html {
     --neutral-gray-800: hsla(0, 0%, 88%, 1);
     --neutral-gray-900: hsla(0, 0%, 93%, 1);
 
+  --neutral-violet-300: hsla(253, 50%, 93%, 1);
+  --neutral-violet-800: hsla(251, 100%, 65%, 1);
+  
     --main: hsla(0, 0%, 88%, 1);
 
     --text: hsla(0, 0%, 98%, 1);

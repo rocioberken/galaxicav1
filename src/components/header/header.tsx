@@ -2,26 +2,17 @@ import { Link } from "react-router-dom";
 import { Toggle } from "../toggle/toggle";
 import styles from "./header.module.scss";
 
-interface HeaderProps {
-  onToggleSidebar: () => void;
-}
 
-export const Header = ({ onToggleSidebar }: HeaderProps) => {
+
+export const Header =  ()=> {
   const user = "Robert";
 
   return (
     <header className={styles.header}>
-      <button
-          className={styles.mobileMenuButton}
-          onClick={onToggleSidebar}
-        >
-          ☰
-        </button>
-
+    
       <Link to={`/`} className={styles.logo}>
         <img src="logo.png" alt="Home" />
       </Link>
-      
 
         <div className={styles.toggle}>
           <Toggle />

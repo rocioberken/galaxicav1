@@ -2,15 +2,15 @@ header {
     display: inline-flex;
     width: calc(100vw - 2rem);
     justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+    padding: 2rem 0.5rem;
     position: absolute;
     height: 30px;
     align-items: center;
 }
 
 .logo img {
-    max-width: 28px;
+    max-width: 60px;
 }
 
 .user {

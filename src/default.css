@@ -7,7 +7,7 @@ body {
 #root {
   height: 100%;
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: var(--neutral-gray-100);
   font-optical-sizing: auto;
   font-weight: 400;

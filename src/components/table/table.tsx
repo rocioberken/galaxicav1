@@ -8,17 +8,14 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import styles from "./table.module.scss";
-import { Status } from "../status/status";
 
-export type ProductStatusProps = "Approved" | "Pending" | "Rejected";
 
 export type ProductProps = {
   id: number;
   customer: string;
   date: string;
   product: string;
-  status: ProductStatusProps;
-  email: string;
+  country: string;
   amount: string;
   paymentMethod: string;
 };
@@ -35,7 +32,7 @@ const defaultColumns: ColumnDef<ProductProps>[] = [
       <>
         <span className={styles.customer}>{row.original.customer}</span>
         <br />
-        {row.original.email}
+        {row.original.country}
       </>
     ),
   },
@@ -48,11 +45,6 @@ const defaultColumns: ColumnDef<ProductProps>[] = [
     accessorKey: "product",
     cell: (info) => <span className="hideMobile">{info.getValue() as string}</span>,
     header: () => <span className="hideMobile">Product</span>,
-  },
-  {
-    header: "Status",
-    accessorKey: "status",
-    cell: ({ row }) => <Status status={row.original.status} />,
   },
   {
     header: "Amount",
@@ -88,8 +80,8 @@ export const Table = ({ data }: Props) => {
 
   return (
     <div className={styles.tableContainer}>
-      <h2>Transactions</h2>
-      <p>Recent transactions from your store.</p>
+      <h2>Resultados</h2>
+      <p>Resultados para </p>
       <table className={styles.transactions}>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -143,13 +135,7 @@ export const Table = ({ data }: Props) => {
                   </h3>
                   <table>
                     <tbody>
-                      <tr>
-                        <th>Status</th>
-                        <td>
-                          <Status status={selectedRow.status} />
-                        </td>
-                      </tr>
-
+                    
                       <tr>
                         <th>Date:</th>
                         <td>{selectedRow.date}</td>
