@@ -16,11 +16,11 @@ export const Header =  ()=> {
 
         <div className={styles.toggle}>
           <Toggle />
-        </div>
+       
         <div className={styles.user}>
           <img src="user.png" alt="user" />
           <p>Hi, {user}!</p>
-        </div>
+        </div> </div>
     </header>
   );
 };

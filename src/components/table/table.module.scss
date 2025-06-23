@@ -2,19 +2,11 @@
   width: 100%;
   padding: 1.2rem;
   color: var(--neutral-gray-800);
-  font-size: 14px;
-  // border: 1px solid var(--neutral-gray-300);
+  font-size: 16px;
   border-radius: 0.2;
   overflow: auto;
   background-color: var( --background);
-
-    thead{
-  background-color: var(--neutral-violet-300);
-    }
-    th{
-      padding: 0.5rem;
-
-  }
+   
   h2 {
     font-weight: 700;
     font-size: 24px;
@@ -23,62 +15,47 @@
   p {
     margin: 0;
   }
-  .approved {
-    background-color: var(--success);
-    color: var(--text-contrast);
-  }
-  .pending {
-    background-color: var(--warning);
-    color: var(--text-contrast);
-  }
-  .rejected {
-    background-color: var(--error);
-    color: var(--text);
-  }
+ 
   .transactions {
     cursor: pointer;
     width: 100%;
     margin: 1.5rem 0;
     border-spacing: 0; 
+     thead{
+      background-color: var(--neutral-violet-300);
+    }
     th {
-      font-size: 12px;
+      padding: 0.5rem;
+      font-size: 14px;
       font-weight: 400;
       text-align: left !important;
       border-bottom: 0.5px solid var(--neutral-gray-300);
       padding: 10px;
-
-      &:last-of-type {
-        text-align: right !important;
-        font-weight: 800;
-      }
+      @media screen and (max-width: 700px) {
+          font-size: 12px;
+        }
     }
 
     td {
       padding: 12px 10px ;
       height: auto;
       border-bottom: 1px solid var(--neutral-gray-200);
-      
+      line-height: 1.2;
+      span{
+        font-size: 12px;
+      }
       &:last-of-type {
-        font-weight: 800;
-        text-align: right;
         padding: 10px;
       }
       @media screen and (max-width: 700px) {
-          padding: 10px 0 10px 0 !important;
           font-size: 12px;
-    
+          span{
+            font-size: 10px;
+          }
           .container {
             padding: 5px !important;
           }
         }      
-      .email {
-      font-weight: 400;
-      font-size: 12px;
-      }
-      .customer {
-        font-weight: 700;
-        font-size: 14px;
-      }
     }
   }
   

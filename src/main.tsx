@@ -8,7 +8,6 @@ import { Dashboard } from "./routes/dashboard";
 import { Orders } from "./routes/orders";
 import { Tabs } from "./components/tabs/tabs";
 import { Messages } from "./routes/messages";
-import React from "react";
 
 const router = createBrowserRouter([
   {

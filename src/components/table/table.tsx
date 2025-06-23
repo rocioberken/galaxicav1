@@ -12,12 +12,15 @@ import styles from "./table.module.scss";
 
 export type ProductProps = {
   id: number;
-  customer: string;
-  date: string;
-  product: string;
+  company: string;
+  cuit: string;
   country: string;
-  amount: string;
+  area: string;
+  date: string;
+  status: boolean;
+  areacode: number;
   paymentMethod: string;
+
 };
 
 type Props = {
@@ -26,29 +29,40 @@ type Props = {
 
 const defaultColumns: ColumnDef<ProductProps>[] = [
   {
-    header: "Customer",
-    accessorKey: "customer",
+    header: "Rubro y Codigo",
+    accessorKey: "areacode",
     cell: ({ row }) => (
       <>
-        <span className={styles.customer}>{row.original.customer}</span>
+        {row.original.areacode}
         <br />
-        {row.original.country}
+        <span className={styles.area}>{row.original.area}</span>
+
       </>
     ),
   },
   {
+    header: "Nombre y CUIT",
+    accessorKey: "company",
+    cell: ({ row }) => (
+      <>
+      {row.original.company}
+      <br />
+        <span className={styles.cuit}>{row.original.cuit}</span>
+      
+      </>
+    ),
+  },    
+ {
+    header: "Publica",
+    accessorKey: "status",
+  },
+   {
+    header: "Fecha ultimo estado",
     accessorKey: "date",
-    cell: (info) => <span className="hideMobile">{info.getValue() as string}</span>,
-    header: () => <span className="hideMobile">Date</span>,
   },
   {
-    accessorKey: "product",
-    cell: (info) => <span className="hideMobile">{info.getValue() as string}</span>,
-    header: () => <span className="hideMobile">Product</span>,
-  },
-  {
-    header: "Amount",
-    accessorKey: "amount",
+    header: "Pais",
+    accessorKey: "country",
   },
 ];
 
@@ -76,12 +90,13 @@ export const Table = ({ data }: Props) => {
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     onSortingChange: setSorting,
+    enableSortingRemoval: false, // Only allow ascending/descending, not unsorted
   });
 
   return (
     <div className={styles.tableContainer}>
-      <h2>Resultados</h2>
-      <p>Resultados para </p>
+      <h2>Resultado</h2>
+      <p>Resultados para</p>
       <table className={styles.transactions}>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -131,7 +146,7 @@ export const Table = ({ data }: Props) => {
 
                 <div className={styles.productDataTable}>
                   <h3>
-                    {selectedRow.product} <p>Lyla - L12</p>
+                    {selectedRow.company} <p>Lyla - L12</p>
                   </h3>
                   <table>
                     <tbody>
@@ -142,7 +157,7 @@ export const Table = ({ data }: Props) => {
                       </tr>
                       <tr>
                         <th>Amount:</th>
-                        <td>{selectedRow.amount}</td>
+                        <td>{selectedRow.country}</td>
                       </tr>
                       <tr>
                         <th>Payment Method:</th>
