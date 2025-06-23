@@ -1,5 +1,5 @@
 {
-  "orders": [
+  "files": [
     {
       "id": 1,
       "company": "Asesores",
@@ -9,7 +9,18 @@
       "status": true,
       "area": "financial",
       "areacode": "2000",
-      "paymentMethod": "VISA ****5858"
+      "description": "3D Asesores son especialistas en Impuestos de Precios de Transferencia con más de 15 años de en Estudios \"Big Four\" y Empresas Multinacionales. Asesoría contable, impositiva, diseño defensa y documentación.",
+      "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 2,
@@ -20,7 +31,19 @@
       "status": true,
       "area": "financial",
       "areacode": "3044",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "3D Asesores son especialistas en Impuestos de Precios de Transferencia con más de 15 años de experiencia en estudios y empresas multinacionales.",
+      "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 3,
@@ -31,7 +54,19 @@
       "status": true,
       "area": "food",
       "areacode": "30903",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "Mcdonals es una cadena internacional de comida rápida reconocida mundialmente.",
+       "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 4,
@@ -42,7 +77,19 @@
       "status": true,
       "area": "financial",
       "areacode": "2934",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "Johnson es una empresa multinacional dedicada a servicios financieros y consultoría.",
+      "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 5,
@@ -53,7 +100,19 @@
       "status": true,
       "area": "software",
       "areacode": "2032",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "Desarrollos SA es una empresa dedicada al desarrollo de software y soluciones tecnológicas.",
+      "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 6,
@@ -64,7 +123,19 @@
       "status": true,
       "area": "software",
       "areacode": "1200",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "Rio Estudio es un estudio de desarrollo de software y consultoría tecnológica.",
+      "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 7,
@@ -75,7 +146,19 @@
       "status": true,
       "area": "manufacturing",
       "areacode": "2000",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "Distribucion es una empresa dedicada a la fabricación y distribución de productos industriales.",
+       "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 8,
@@ -86,7 +169,19 @@
       "status": true,
       "area": "manufacturing",
       "areacode": "2000",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "Natura es una empresa líder en la fabricación de productos cosméticos y de cuidado personal.",
+      "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 9,
@@ -97,7 +192,19 @@
       "status": true,
       "area": "manufacturing",
       "areacode": "30930",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "Globant es una empresa multinacional de desarrollo de software y servicios IT.",
+      "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 10,
@@ -108,7 +215,19 @@
       "status": true,
       "area": "distribution",
       "areacode": "20902",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "Mercadolibre es la plataforma líder de comercio electrónico en América Latina.",
+       "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     },
     {
       "id": 11,
@@ -119,7 +238,19 @@
       "status": true,
       "area": "comunication",
       "areacode": "2100",
-      "paymentMethod": "VISA ****5858"
+      "paymentMethod": "VISA ****5858",
+      "description": "Clarin es uno de los principales medios de comunicación de Argentina.",
+       "pdfs": {
+      "2022": [
+        { "year": 2022, "name": "Informe Anual 2022.pdf", "url": "/pdfs/asesores/2022/informe-anual-2022.pdf" }
+      ],
+      "2023": [
+        { "year": 2023, "name": "Informe Anual 2023.pdf", "url": "/pdfs/asesores/2023/informe-anual-2023.pdf" }
+      ],
+      "2024": [
+        { "year": 2024, "name": "Informe Anual 2024.pdf", "url": "/pdfs/asesores/2024/informe-anual-2024.pdf" }
+      ]
+      }
     }
   ],
 

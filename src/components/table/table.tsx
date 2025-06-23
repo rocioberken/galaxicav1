@@ -10,7 +10,15 @@ import {
 import styles from "./table.module.scss";
 
 
-export type ProductProps = {
+export type PDF = {
+  year: number;
+  url: string;
+  name: string;
+};
+
+export type CompanyProps = {
+  pdfs: PDF[];
+  description: string;
   id: number;
   company: string;
   cuit: string;
@@ -19,15 +27,13 @@ export type ProductProps = {
   date: string;
   status: boolean;
   areacode: number;
-  paymentMethod: string;
-
 };
 
 type Props = {
-  data: ProductProps[];
+  data: CompanyProps[];
 };
 
-const defaultColumns: ColumnDef<ProductProps>[] = [
+const defaultColumns: ColumnDef<CompanyProps>[] = [
   {
     header: "Rubro y Codigo",
     accessorKey: "areacode",
@@ -68,9 +74,9 @@ const defaultColumns: ColumnDef<ProductProps>[] = [
 
 
 export const Table = ({ data }: Props) => {
-  const [selectedRow, setSelectedRow] = useState<ProductProps | null>(null);
+  const [selectedRow, setSelectedRow] = useState<CompanyProps | null>(null);
 
-  const handleRowClick = (row: ProductProps) => {
+  const handleRowClick = (row: CompanyProps) => {
     setSelectedRow(row);
   };
 
@@ -97,7 +103,7 @@ export const Table = ({ data }: Props) => {
     <div className={styles.tableContainer}>
       <h2>Resultado</h2>
       <p>Resultados para</p>
-      <table className={styles.transactions}>
+      <table className={styles.itemsTable}>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
@@ -139,37 +145,76 @@ export const Table = ({ data }: Props) => {
                 className={styles.modalContent}
                 onClick={(e) => e.stopPropagation()}
               >
-                <button onClick={handleClose} className={styles.closeButton}>
-                  ×
+                <button onClick={handleClose} className={styles.backButton}>
+                〱 
                 </button>
-                <div className={styles.productImage}> <img src="./product.jpg" alt="" /></div>
-
-                <div className={styles.productDataTable}>
+                <button onClick={handleClose} className={styles.closeButton}>
+                 ╳
+                </button>
+                
+                <div>
                   <h3>
-                    {selectedRow.company} <p>Lyla - L12</p>
+                    {selectedRow.company} 
                   </h3>
-                  <table>
+
+                  <table className={styles.companyDataTable}>
                     <tbody>
-                    
+                    <td className={styles.infoCell}>
                       <tr>
-                        <th>Date:</th>
-                        <td>{selectedRow.date}</td>
+                        <th>Rubro:</th>
+                        <td>{selectedRow.area}</td>
+                      </tr>
+                       <tr>
+                        <th>Codigo SIC:</th>
+                        <td>{selectedRow.areacode}</td>
                       </tr>
                       <tr>
-                        <th>Amount:</th>
+                        <th>Cuit:</th>
+                        <td>{selectedRow.cuit}</td>
+                      </tr>
+                      <tr>
+                        <th>Publica:</th><td>
+                        {selectedRow.status ? "true" : "false"}</td>
+                      </tr>
+                      <tr>
+                        <th>País:</th>
                         <td>{selectedRow.country}</td>
                       </tr>
+                      
+                    </td>
+                    <td className={styles.descriptionCell}> 
+                         <p>{selectedRow.description}</p>
+                    </td>
+                      
+                    </tbody>
+                  </table>{" "}
+                
+                <div >
+                  <h4>  </h4>
+                  <table className={styles.companyPDF}>
+                    <thead>
                       <tr>
-                        <th>Payment Method:</th>
-                        <td>{selectedRow.paymentMethod}</td>
+                        <th>Año</th>
+                        <th>ver PDF</th>
                       </tr>
-                      <tr>
-                        <th>Transaction ID:</th>
-                        <td>#{selectedRow.id}</td>
-                      </tr>
+                    </thead>
+                    <tbody>
+                      {selectedRow.pdfs.map((pdf) => (
+                        <tr key={pdf.year}>
+                          <td>{pdf.year}</td>
+                          <td>
+                            <a href={pdf.url} target="_blank" rel="noopener noreferrer">
+                              {pdf.name}
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+
                     </tbody>
                   </table>{" "}
                 </div>
+                </div>
+               
               </div>
             </div>
           )}

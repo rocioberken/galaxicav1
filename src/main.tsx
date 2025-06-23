@@ -5,7 +5,6 @@ import Root from "./routes/root";
 
 import "./index.css";
 import { Dashboard } from "./routes/dashboard";
-import { Orders } from "./routes/orders";
 import { Tabs } from "./components/tabs/tabs";
 import { Messages } from "./routes/messages";
 
@@ -22,10 +21,7 @@ const router = createBrowserRouter([
             path: "/",
             element: <Dashboard />,
           },
-          {
-            path: "/orders",
-            element: <Orders />,
-          },
+         
         ],
       },
       {
