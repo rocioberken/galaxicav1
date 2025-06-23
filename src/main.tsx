@@ -5,32 +5,22 @@ import Root from "./routes/root";
 
 import "./index.css";
 import { Dashboard } from "./routes/dashboard";
-import { Tabs } from "./components/tabs/tabs";
-import { Messages } from "./routes/messages";
+ import { Messages } from "./routes/messages";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     children: [
-      {
-        path: "/",
-        element: <Tabs />,
-        children: [
-          {
-            path: "/",
+      {   path: "/",
             element: <Dashboard />,
           },
          
         ],
       },
-      {
-        path: "/messages",
-        element: <Messages />,
-      },
+      
     ],
-  },
-]);
+);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
