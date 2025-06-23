@@ -5,7 +5,6 @@ import Root from "./routes/root";
 
 import "./index.css";
 import { Dashboard } from "./routes/dashboard";
- import { Messages } from "./routes/messages";
 
 const router = createBrowserRouter([
   {
