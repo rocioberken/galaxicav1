@@ -1,7 +1,7 @@
 .tableContainer {
 	width: 100%;
 	padding: 1.2rem;
-  background-color: var(--neutral-gray-50);
+	background-color: var(--neutral-gray-50);
 	font-size: 16px;
 	overflow: auto;
 
@@ -16,15 +16,14 @@
 
 	.itemsTable {
 		cursor: pointer;
-		width: 85%;
-		margin: 1.5rem 0;
-    border-radius: 5px;
+		width: 100%;
+		margin: 1.5rem auto;
+		border-radius: 5px;
 		border-spacing: 0;
-    background-color: var(--background);
+		background-color: var(--background);
 
 		thead {
 			background-color: var(--neutral-violet-300);
-
 		}
 		th {
 			font-size: 14px;
@@ -86,131 +85,163 @@
 		align-items: flex-start;
 		justify-content: center;
 		padding-top: 0;
-        margin-top: 4rem;
-
+		margin-top: 4rem;
 
 		.drawer:target {
 			opacity: 1;
 			pointer-events: auto;
 		}
 		@media screen and (max-width: 700px) {
-			align-items: center !important;
-			padding-top: 2rem !important;
+			align-items: flex-start;
+			padding-top: 0;
 		}
 	}
 	.modalContent {
 		width: 100%;
 		position: relative;
-      padding: 2rem;
-			background-color: var(--neutral-gray-50);
-			min-height: 60vh;
-      font-size: 14px;
-			border-radius: 0 0 4px 4px;
-       h3 {
-          padding: 1rem;
-          font-size: 36px;
-          font-weight: 700;
-        }
-		
-      .modalContent:target {
+		padding: 0.5rem 1.2rem 3rem;
+		background-color: var(--neutral-gray-50);
+		font-size: 14px;
+		height: -webkit-fill-available;
+		div{
+			max-width: 1600px;	}	
+
+		border-radius: 0 0 4px 4px;
+		h3 {
+			padding: 1rem;
+			font-size: 36px;
+			font-weight: 700;
+			text-align: left;
+		}
+		.modalContent:target {
 			opacity: 1;
 			pointer-events: auto;
 		}
-    	.backButton {
-			position: absolute;
-			top: 0.5rem;
-			left: 1rem;
-			font-size: 1.8rem;
-			background: none;
-			border: none;
-			cursor: pointer;
-      color: var(--neutral-gray-600)  ;
+		.closeDrawer {
+			display: inline-flex;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+			
+
+			.backButton,
+			.closeButton {
+				top: 0.5rem;
+				background: none;
+				border: none;
+				cursor: pointer;
+				color: var(--neutral-gray-600);
+				width: auto;
+				margin: 0;
+				padding: 0.5rem 1rem;
+			}
+			.closeButton {
+				right: 1rem;
+				font-size: 1.5rem;
+				font-weight: 900;
+				justify-self: right;
+			}
+			.backButton {
+				left: 1rem;
+				font-size: 1.8rem;
+				justify-self: left;
+				font-weight: 100;
+			}
 		}
 
-		.closeButton {
-			position: absolute;
-			top: 0.5rem;
-			right: 1rem;
-			font-size: 2rem;
-			background: none;
-			border: none;
-			cursor: pointer;
-      font-weight: 800;
-      color: var(--neutral-gray-600)  ;
+		.companyDataTable {
+			width: 100%;
+			color: var(--neutral-gray-800);
+			border-spacing: 1rem 0;
+			td {
+				border: none !important;
+				padding: 8px;
+				@media screen and (max-width: 700px) {
+					display: inline-block;
+					font-size: 16px;
+					margin-bottom: 1rem;
+				}
+			}
+			.infoCell {
+				background-color: var(--background);
+				border: 0.5px solid var(--neutral-gray-400) !important;
+				border-radius: 10px;
+				padding: 1rem;
+				@media screen and (max-width: 700px) {
+					width: 100%;
+				}
+			}
+			.descriptionCell {
+				background-color: var(--neutral-violet-300);
+				border-radius: 10px;
+				padding: 1rem;
+				width: 40%;
+				@media screen and (max-width: 700px) {
+					width: 100%;
+				}
+			}
+			th {
+				justify-items: end;
+				font-size: 14px;
+				border: 0 solid var(--neutral-gray-200) !important;
+			}
+			p {
+				padding: 1rem;
+				width: 95%;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.6;
+			}
 		}
-			.companyDataTable {
-				width:100%;
-				color: var(--neutral-gray-600);
-        border-spacing: 1rem 0;
-				td {
-					border: none !important;
-					padding: 8px;
+		.companyPDF {
+			padding: 1rem;
+			width: 60%;
+			border-spacing: 0 10px;
+			thead {
+				background-color: var(--neutral-violet-300);
+			}
+			th {
+				border-bottom: 1px solid var(--neutral-gray-600);
+				border-top: 1px solid var(--neutral-gray-600);
+				&:last-of-type {
+					border-right: 1px solid var(--neutral-gray-600);
+					border-radius: 0px 10px 10px 0px;
+					padding: 1rem 2rem;
 				}
-				.infoCell {
-					background-color: var(--background);
-					border: 0.5px solid var(--neutral-gray-400) !important;
-					border-radius: 10px;
-					padding: 1rem;
+				&:first-of-type {
+					border-left: 1px solid var(--neutral-gray-600);
+					border-radius: 10px 0px 0px 10px;
+					padding: 1rem 2rem;
 				}
-        .descriptionCell {
-					background-color: var(--neutral-violet-300);
-					border-radius: 10px;
-					padding: 1rem;
-          width: 40%;
+			}
+			td {
+				padding: 1.5rem;
+				background-color: var(--background);
+				border-bottom: 1px solid var(--neutral-gray-600);
+				border-top: 1px solid var(--neutral-gray-600);
+				@media screen and (max-width: 700px) {
+					font-size: 16px !important;
 				}
-        th {
-					justify-items: end;
-					font-size: 14px;
-					border: 0 solid var(--neutral-gray-200) !important;
+				&:first-of-type {
+					border-left: 1px solid var(--neutral-gray-600);
+					border-radius: 10px 0px 0px 10px;
+					padding: 1rem 2rem;
 				}
-        p {
-          padding: 1rem;
-          width: 95%;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 1.6;
-        }
-       
-      }
-      .companyPDF{
-          padding: 1rem;
-          width: 60%;
-          border-spacing: 0 10px ;
-          thead{
-					background-color: var(--neutral-violet-300);
-          }
-          th{
-          border-bottom: 1px solid var(--neutral-gray-600);
-          border-top: 1px solid var(--neutral-gray-600);
-            &:last-of-type{
-              border-right: 1px solid var(--neutral-gray-600);
-              border-radius: 0px 10px 10px 0px;
-              padding: 1rem 2rem;
-           }
-           &:first-of-type{
-              border-left: 1px solid var(--neutral-gray-600);
-              border-radius: 10px 0px 0px 10px;
-              padding: 1rem 2rem  ;
-           }
-          }
-         td{ 
-					padding: 1.5rem ;
-          background-color: var(--background);
-          border-bottom: 1px solid var(--neutral-gray-600);
-          border-top: 1px solid var(--neutral-gray-600);
-           &:first-of-type{
-              border-left: 1px solid var(--neutral-gray-600);
-              border-radius: 10px 0px 0px 10px;
-              padding: 1rem 2rem;
-           }
-         &:last-of-type{
-              border-right: 1px solid var(--neutral-gray-600);
-              border-radius: 0px 10px 10px 0px;
-              padding: 1rem 2rem;
-            }
-          
-        
+				&:last-of-type {
+					border-right: 1px solid var(--neutral-gray-600);
+					border-radius: 0px 10px 10px 0px;
+					padding: 1rem 2rem;
+				}
+			}
+			@media screen and (max-width: 700px) {
+				width: 100%;
+				font-size: 16px !important;
+			}
+		}
 	}
-}
-}
+	@media screen and (max-width: 700px) {
+		padding: 1rem 0;
+	}
 }

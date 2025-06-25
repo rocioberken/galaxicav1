@@ -5,6 +5,7 @@ import Root from "./routes/root";
 
 import "./index.css";
 import { Dashboard } from "./routes/dashboard";
+import Filter from "./components/filter/filter";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,9 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {   path: "/",
+            element: <Filter />,
+          },
+          {   path: "/",
             element: <Dashboard />,
           },
          

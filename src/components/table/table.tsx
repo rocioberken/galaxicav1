@@ -101,8 +101,8 @@ export const Table = ({ data }: Props) => {
 
   return (
     <div className={styles.tableContainer}>
-      <h2>Resultado</h2>
-      <p>Resultados para</p>
+      {/* <h2>Resultado</h2>
+      <p>Resultados para <span> </span></p> */}
       <table className={styles.itemsTable}>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -145,12 +145,14 @@ export const Table = ({ data }: Props) => {
                 className={styles.modalContent}
                 onClick={(e) => e.stopPropagation()}
               >
-                <button onClick={handleClose} className={styles.backButton}>
-                〱 
-                </button>
-                <button onClick={handleClose} className={styles.closeButton}>
-                 ╳
-                </button>
+                <div className={styles.closeDrawer}>
+                  <button onClick={handleClose} className={styles.backButton}>
+                  〱 
+                  </button>
+                  <button onClick={handleClose} className={styles.closeButton}>
+                  ╳
+                  </button>
+                </div>
                 
                 <div>
                   <h3>

@@ -32,7 +32,7 @@ html {
     --background: hsla(0, 0%, 0%, 1);
     --foreground: hsla(0, 0%, 100%, 1);
 
-    --neutral-gray-50: hsla(0, 0%, 11%, 1);
+    --neutral-gray-50: rgb(32, 32, 32);
     --neutral-gray-100: hsla(0, 0%, 16%, 1);
     --neutral-gray-200: hsla(0, 0%, 20%, 1);
     --neutral-gray-300: hsla(0, 0%, 29%, 1);
@@ -42,9 +42,9 @@ html {
     --neutral-gray-700: hsla(0, 0%, 74%, 1);
     --neutral-gray-800: hsla(0, 0%, 88%, 1);
     --neutral-gray-900: hsla(0, 0%, 93%, 1);
-
-  --neutral-violet-300: hsla(253, 50%, 93%, 1);
-  --neutral-violet-800: hsla(251, 100%, 65%, 1);
+ 
+    --neutral-violet-300: rgb(74, 53, 170);
+    --neutral-violet-800: rgb(217, 217, 217);
   
     --main: hsla(0, 0%, 88%, 1);
 
@@ -52,5 +52,6 @@ html {
     --text-contrast: hsla(90, 6%, 7%, 1);
 
     --shadow: hsla(0, 0%, 0%, 0.5);
+   
   }
 }

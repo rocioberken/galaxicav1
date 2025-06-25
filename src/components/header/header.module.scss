@@ -12,7 +12,11 @@ header {
 
 .logo img {
     max-width: 60px;
-}
+    &.dark{
+       
+      filter: invert(1);
+    }
+    }
 
 .user {
     display: inline-flex;
