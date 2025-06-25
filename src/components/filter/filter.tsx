@@ -27,33 +27,6 @@ const Filter: React.FC = () => {
         setAreacode(e.target.value);
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        const filtered = (data.files ?? [])
-            .filter(
-                (item: any) =>
-                    typeof item.company === 'string' &&
-                    typeof item.cuit === 'string' &&
-                    typeof item.pdfs !== 'undefined' &&
-                    typeof item.description === 'string' &&
-                    typeof item.id !== 'undefined' &&
-                    typeof item.country === 'string'
-            )
-            .filter(
-                (item) =>
-                    (item.company.toLowerCase().includes(query.toLowerCase()) ||
-                    item.cuit.toLowerCase().includes(query.toLowerCase())) &&
-                    (areacode === '' || String(item.areacode) === areacode)
-            )
-            .map((item) => ({
-                ...item,
-                areacode: typeof item.areacode === 'string' ? Number(item.areacode) : item.areacode,
-                pdfs: Array.isArray(item.pdfs)
-                    ? item.pdfs
-                    : Object.values(item.pdfs ?? {}).flat(),
-            }));
-        setResults(filtered);
-    };
 
     // State to hold submitted values
     const [submittedQuery, setSubmittedQuery] = useState('');
