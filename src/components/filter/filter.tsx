@@ -13,7 +13,7 @@ const Filter: React.FC = () => {
     // Extract unique areacodes from data and normalize to string
     const areacodeOptions = Array.from(
         new Set(
-            (data.files ?? [])
+            (data ?? [])
                 .map((item: any) => String(item.areacode))
                 .filter((code) => !!code)
         )
@@ -42,11 +42,11 @@ const Filter: React.FC = () => {
         setSubmitted(true);
         setCurrentPage(1);
 
-        const filtered = (data.files ?? [])
+        const filtered = (data ?? [])
             .filter(
                 (item: any) =>
                     typeof item.name === 'string' &&
-                    typeof item.cuit === 'string' &&
+                    (typeof item.cuit === 'string' || typeof item.cuit === 'number') &&
                     typeof item.pdfs !== 'undefined' &&
                     typeof item.description === 'string' &&
                     typeof item.id !== 'undefined' &&
@@ -55,8 +55,8 @@ const Filter: React.FC = () => {
             .filter(
                 (item) =>
                     (item.name.toLowerCase().includes(query.toLowerCase()) ||
-                    item.cuit.toLowerCase().includes(query.toLowerCase())) &&
-                    (areacode === '' || item.areacode === areacode)
+                        String(item.cuit).includes(query)) &&
+                        (areacode === '' || item.areacode === areacode)
             )
             .map((item) => {
                 const pdfs = Array.isArray(item.pdfs)
@@ -67,7 +67,7 @@ const Filter: React.FC = () => {
                 return {
                     // keep original useful fields
                     name: item.name,
-                    cuit: item.cuit,
+                    cuit: String(item.cuit),
                     description: item.description,
                     country: item.country,
                     id: item.id,
