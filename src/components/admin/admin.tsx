@@ -13,7 +13,7 @@ type DataItem = {
 	[key: string]: any;
 };
 
-const fetchData = async (): Promise<DataItem[]> => {
+const fetchData = async (): Promise<DataItem[] | { files: DataItem[] }> => {
 	const res = await fetch("http://localhost:3001/api/data");
 	if (!res.ok) throw new Error("Failed to fetch data");
 	return res.json();
