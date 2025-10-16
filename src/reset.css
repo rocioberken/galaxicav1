@@ -104,11 +104,20 @@ textarea,
 select {
   font-family: inherit;
   font-size: smaller;
+  background-color: var(--neutral-gray-50);
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--neutral-gray-600);
+    border-image: initial;
+    border-radius: 2px;
+
 }
 
 :focus-visible {
-  outline: medium dashed var(--main, currentColor);
-  outline-offset: 2px;
+  outline: 1px solid var(--neutral-gray-400);
+  box-shadow: 0 2px 4px var(--neutral-gray-400);
+  border-radius: 5px;
 }
 
 main,

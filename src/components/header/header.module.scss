@@ -1,6 +1,5 @@
 header {
     display: inline-flex;
-    width: calc(100vw);
     justify-content: space-between;
     padding: 2rem 1rem;
     position: fixed;
@@ -8,10 +7,34 @@ header {
     align-items: center;
     z-index: 100;
     background-color: var(--background);
+        width: 100vw;
+
+}
+.menu{
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    list-style: none;
+ justify-content: flex-end;
+     font-size: 0.8rem;
+
+
+    li,a{
+        text-decoration: none;
+    }
+
+}
+.navbar{
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+
 }
 
 .logo img {
-    max-width: 60px;
+    max-width: 120px;
+    width: 90px;
+    padding: 10px;
         &.dark{
         
         filter: invert(1);
@@ -72,4 +95,6 @@ header {
         padding-bottom: 5px;
 
     }
+
+    
 }

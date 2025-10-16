@@ -1,99 +1,94 @@
-.filterContainer {
+.formFilter {
 	padding: 2rem 0;
 	height: 90vh;
 	display: block;
 	background-color: var(--neutral-gray-50);
-	 @media screen and (max-width: 700px) {
-           	padding: 1rem 0;
-			height: 100vh;
-           
-        }
-
-	// &:focus {
-	// 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	// 	border: 1px solid var(--neutral-gray-600);
-	// }
-	// .filterInput {
-	// 	padding: 1rem;
-	// 	width: 50%;
-	// 	max-width: 300px;
-	// 	border-radius: 4px;
-	// 	border: 1px solid var(--neutral-gray-300);
-	// }
-	// .filterInput:focus {
-	// 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	// 	border: 1px solid var(--neutral-gray-600);
-	// }
-
-	h3{
+	@media screen and (max-width: 700px) {
+		padding: 1rem 0;
+		height: 100vh;
+	}
+	h3 {
 		color: var(--text);
 		margin-bottom: 1.4rem;
 		text-align: center;
 		font-weight: 600;
 		font-size: 1rem;
 		margin-block: 0.75rlh 0.5rlh;
-		span{
+		span {
 			font-weight: 800;
 		}
 	}
-		h4{
-		color: var(--text);
+	h4 {
 		margin-bottom: 0.8rem;
-		text-align: center;
+		text-align: left;
 		font-weight: 400;
 		font-size: 1rem;
 		margin-block: 0.75rlh 0.5rlh;
-		
+		width: 50%;
+		display: inline-block;
+		line-height: 1.9;
+		:first-child span{
+			color: var(--neutral-gray-900);
+		}
+		}	
+		span{
+			padding-left: 1rem;
 	}
-	// .noResults {
-	// 	margin: 3rem;
-	// 	color: var(--neutral-gray-600);
-	// 	padding: 2rem;
-	// 	font-size: 1.2rem;
-	// }
-
-	.formFilter {
+	.search {
 		width: 100%;
 		margin: 0 auto;
-		display: grid;
-		input, select, label {
-			display: block; 
-			text-align: center;
-			justify-self: center;
-			padding: 1.2rem;
-			color: var(--neutral-violet-800);
-			font-size: 1.1rem;
-			width: 60%;
+		display: inline-block;
+		padding: 1rem 10%;
+			select {
+				border: 1px solid var(--neutral-violet-800);
+				color: var(--neutral-gray-700);
+				background-color: var(--background);
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+			}
+			 input{
+				border: 1px solid var(--neutral-gray-400);
+				color: var(--neutral-gray-500);
+				background-color: var(--neutral-gray-200);
+			}
+
+		input,
+		select,
+		label {
+			display: block;
+			padding: 1rem;
+			font-size: 1rem;
+			width: 90%;
 			border-radius: 10px;
-			border: 1px solid var(--neutral-violet-800);
-			background-color: transparent;
-			margin-bottom: 2rem;
-				&:focus {
-					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-					outline: none;
-					background-color: var(--background);
-				}&::placeholder {
-					text-align: center;
-				}
+			margin-bottom: 1rem;
+			&:focus {
+				outline: none;
+				background-color: var(--background);
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			}
+			&::placeholder {
+				color:var(--neutral-gray-400);
+			}
+			
 			@media screen and (max-width: 700px) {
 				width: 90%;
 			}
 		}
 		button {
-		    justify-self: center;
+			justify-self: center;
 			display: block;
-			padding: .8rem 2.4rem;
-			font-size: .9rem;
+			padding: 0.8rem 2.4rem;
+			font-size: 0.9rem;
 			border-radius: 10px;
 			border: none;
-			width: 60%;
+			width: 80%;
 			background: var(--neutral-violet-800);
 			color: var(--neutral-gray-50);
 			letter-spacing: 1px;
 			font-weight: 800;
 			cursor: pointer;
 			margin: 1rem;
-			  width: 40%;
+			width: 40%;
 			&:hover {
 				color: #fff;
 			}
